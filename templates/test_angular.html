@@ -1,0 +1,27 @@
+  <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>fei</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    -->
+  </head>
+<body ng-app="dataAy">
+    <div runoob-directive></div>
+    <div class="runoob-directive"></div>
+    <!-- directive: runoob-directive -->
+    <script src="../static/jquery-2.1.4.min.js"></script>
+    <script src="../static/angular.js"></script>
+    <script>
+var app = angular.module("dataAy", []);
+app.directive("runoobDirective", function() {
+    return {
+        template : "<h1>自定义指令!</h1>"
+    };
+});
+</script>
+</body>
+</html>
