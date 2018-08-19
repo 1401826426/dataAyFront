@@ -7,30 +7,52 @@
     <script src="../static/angular.js"></script>
     <script src="../static/test_chat_angular.js"></script>
     <script src="../static/Chart.js"></script>
+    <script src="../static/pace.min.js"></script>
+    <script src="../static/main.js"></script>
+    <script src="../static/bootstrap.min.js"></script>
+    <!--<link href="../static/bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="../static/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+    <!-- Font-icon css-->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body ng-app="dataAy">
 
-<div class="row">
-    <div class="col-sm-6 col-md-3" ng-repeat="item in [0,1,2,3,4,5,6,7,8,9]" style="float: left;display: block;margin-left: 8vw">
-        <chart chart-type={{item%2==0?'bar':'line'}}></chart>
+<aside class="main-sidebar hidden-print" style="float: left;display: block">
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 612px;">
+        <section class="sidebar" style="overflow: hidden; width: auto; height: 612px;">
+            <div class="user-panel">
+                <div class="pull-left image"><img class="img-circle" src="../static/48.jpg" alt="User Image"></div>
+                <div class="pull-left info">
+                    <p>John Doe</p>
+                    <p class="designation">Frontend Developer</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="treeview"><a href="#"><i class="fa fa-laptop"></i><span>UI Elements</span><i class="fa fa-angle-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Bootstrap Elements</a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-circle-o"></i> Font Icons</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Cards</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Widgets</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
     </div>
+</aside>
+
+<div  style="width: 80vw;margin-left: 20vw">
+    <chart chart-type={{item%2==0?'bar':'line'}} ng-repeat="item in [0,1,2,3,4,5,6,7,8,9]"
+           style="display: block;height:40vh;width:20%;float: left;margin-left:2%"></chart>
 </div>
-
-<!--<div class="chart-container" style="height:40vh; width:80vw;">-->
-    <!--<canvas  chart  chart-type="bar" style="position: relative;height:0; width:0"></canvas>-->
-<!--</div>-->
-
-<!--<div class="chart-container" style="height:40vh; width:80vw;display: block">-->
-    <!--<canvas  chart  chart-type="line" style="position: relative;height:0; width:0"></canvas>-->
-<!--</div>-->
-
-
-
-<!--<canvas  chart  chart-type="horizontalBar" style="display: block; width: 584px; height: 292px;"></canvas>-->
-
-<!--<canvas  chart  chart-type="radar" style="display: block; width: 584px; height: 292px;"></canvas>-->
-
-   <!--<canvas id="myChart1"></canvas>-->
 
   <script>
       dataAy.ini() ;
