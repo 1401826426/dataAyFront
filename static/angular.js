@@ -7090,6 +7090,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
                 $exceptionHandler(e);
               }
             });
+              // console.log(directives) ;
             return directives;
           }]);
       }
