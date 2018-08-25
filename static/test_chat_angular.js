@@ -1,7 +1,7 @@
 dataAy = {
 
     ini:function () {
-        let app = angular.module("dataAy",[])
+        let app = angular.module("dataAy",['ngRoute'])
 
         app.controller('dataAyChart',function ($scope) {
             $scope.labels=["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]
@@ -12,6 +12,9 @@ dataAy = {
                 borderColor: 'blue',
                 borderWidth: 1
             }]
+            $scope.openModule={
+
+            }
         })
 
         app.directive("chart",function () {
